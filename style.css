@@ -184,19 +184,21 @@ section a {
 #header-section {
   width: 100%;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-image: url("header-bkgd4.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #fff;
+  position: relative;
 }
 
 #header-section img {
   width: 45%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* LOCATION */
@@ -378,6 +380,7 @@ section a {
 
   #header-section img {
     width: 100%;
+    top: 40%;
   }
 
   /* Pics Slide Scroll */
