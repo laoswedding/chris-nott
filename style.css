@@ -150,6 +150,7 @@ section a {
   padding: 0;
   white-space: nowrap;
   position: relative;
+  background-color: rgb(229, 227, 225);
 }
 
 .pics-track {
@@ -218,12 +219,44 @@ section a {
 
 /* LOCATION */
 #travel-section {
+  /* background-image: url("bkgd-2.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+  background-color: #fff;
+  color: #000;
+}
+
+/* AGENDA */
+#agenda-section {
   background-image: url("bkgd-2.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #fff;
   color: #000;
+}
+
+.agenda-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 30%;
+}
+
+.empty-space {
+  margin-right: 3.6rem;
+}
+
+.word-space {
+  margin-right: 1rem;
+}
+
+.agenda-container p {
+  text-align: left;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
 }
 
 /* ACCORDION */
@@ -403,6 +436,21 @@ section a {
   }
 
   .location-img {
-  width: 100%;
-}
+    width: 100%;
+  }
+
+  .agenda-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .agenda-container p {
+    width: 100%;
+  }
+
+  .empty-space {
+    margin-right: 2rem;
+  }
 }
