@@ -457,4 +457,8 @@ section a {
   .accordion {
     width: 90%;
   }
+
+  .accordion_btn {
+    font-size: 1.2rem;
+  }
 }
