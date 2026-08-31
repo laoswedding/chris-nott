@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Carattere&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Carattere&family=Forum&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -85,7 +85,7 @@ a {
 
 .nav-link {
   transition: 0.7s ease;
-  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  font-family: "Forum", "Times New Roman", Times, serif;
   text-decoration: none;
   color: #aa901e;
   font-weight: 400;
@@ -135,7 +135,7 @@ section h3 {
 
 section p {
   font-size: 1.2rem;
-  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  font-family: "Forum", "Times New Roman", Times, serif;
   width: 80%;
   text-align: center;
 }
@@ -218,7 +218,7 @@ section a {
 
 /* COUNTDOWN */
 .countdown-wrap {
-  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  font-family: "Forum", "Times New Roman", Times, serif;
   text-align: center;
   padding: 40px;
 }
@@ -344,7 +344,7 @@ section a {
 .accordion_item {
   overflow: hidden;
   transition: all 0.3s ease;
-  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  font-family: "Forum", "Times New Roman", Times, serif;
 }
 
 .accordion_btn {
@@ -357,7 +357,7 @@ section a {
   text-align: left;
   font-weight: 600;
   font-size: 1.3rem;
-  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  font-family: "Forum", "Times New Roman", Times, serif;
   transition:
     background 0.3s,
     border-radius 0.3s ease;
@@ -546,5 +546,4 @@ footer img {
   .accordion_btn {
     font-size: 1.2rem;
   }
-
 }
