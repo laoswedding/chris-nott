@@ -432,7 +432,7 @@ section a {
 
   /* SECTION */
   iframe {
-    width: 90%;
+    width: 95%;
   }
 
   .location-img {
@@ -452,5 +452,9 @@ section a {
 
   .empty-space {
     margin-right: 2rem;
+  }
+
+  .accordion {
+    width: 90%;
   }
 }
