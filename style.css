@@ -111,6 +111,7 @@ a {
   transition: all 0.3s ease-in-out;
   /* color of bars */
   background-color: #aa901e;
+  border-radius: 3px;
 }
 
 /* SECTION */
@@ -209,6 +210,10 @@ section a {
   background-repeat: no-repeat;
   background-color: #000;
   color: #fff;
+}
+
+.location-img {
+  width: 30%;
 }
 
 /* LOCATION */
@@ -318,7 +323,7 @@ section a {
   color: #000;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   section {
     padding: 2rem 1rem;
     height: 100%;
@@ -396,4 +401,8 @@ section a {
   iframe {
     width: 90%;
   }
+
+  .location-img {
+  width: 100%;
+}
 }
