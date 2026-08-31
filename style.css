@@ -134,7 +134,7 @@ section h3 {
 }
 
 section p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-family: "Forum", "Times New Roman", Times, serif;
   width: 80%;
   text-align: center;
@@ -142,6 +142,12 @@ section p {
 
 section a {
   color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+section a:hover {
+  cursor: pointer;
+  filter: brightness(85%);
 }
 
 .pics {
@@ -303,7 +309,7 @@ section a {
 }
 
 .empty-space {
-  margin-right: 4.7rem;
+  margin-right: 4rem;
 }
 
 .word-space {
@@ -311,7 +317,7 @@ section a {
 }
 
 .agenda-container p {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   text-align: left;
   display: block;
   margin: 0 auto;
@@ -532,11 +538,11 @@ footer img {
 
   .agenda-container p {
     width: 100%;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
   }
 
   .empty-space {
-    margin-right: 3.3rem;
+    margin-right: 2.9rem;
   }
 
   .accordion {
