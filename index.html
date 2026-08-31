@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="logo.webp" type="image/x-icon">
     <script src="https://kit.fontawesome.com/8efc22d7af.js" crossorigin="anonymous"></script>
+    <script src="app.js" defer></script>
     <script src="accordion.js" defer></script>
     <title>Christopher & Chanthaphone Wedding | March 20, 2027</title>
 </head>
@@ -93,6 +94,27 @@
         <p><b>Website:</b> <a href="http://www.lethatluangdor.com/" target="blank">lethatluangdor.com</a></p>
         <p><b>Date:</b> Saturday, March 20, 2027</p>
         <p><b>Time:</b> 5:00 PM - 10:00 PM</p>
+        <div class="countdown-wrap">
+            <div class="countdown-title">Countdown to March 20, 2027, 5:00 PM</div>
+            <div class="countdown" id="countdown">
+                <div class="unit">
+                    <div class="value" id="days">00</div>
+                    <div class="label">Days</div>
+                </div>
+                <div class="unit">
+                    <div class="value" id="hours">00</div>
+                    <div class="label">Hours</div>
+                </div>
+                <div class="unit">
+                    <div class="value" id="minutes">00</div>
+                    <div class="label">Minutes</div>
+                </div>
+                <div class="unit">
+                    <div class="value" id="seconds">00</div>
+                    <div class="label">Seconds</div>
+                </div>
+            </div>
+        </div>
     </section>
     <section id="agenda-section">
         <h2>Ceremony <span class="word-space"></span>Agenda</h2>
@@ -315,25 +337,12 @@
                 </div>
             </div>
         </div>
-        <p>Bios</p>
-        <p>Pre wedding photos</p>
-        <script>
-            const navMenu = document.querySelector(".nav-menu");
-            const hamburger = document.querySelector(".hamburger");
-            const navLinks = document.querySelectorAll(".nav-link");
-
-            hamburger.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-                hamburger.classList.toggle('active');
-            })
-
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    navMenu.classList.remove('active');
-                    hamburger.classList.remove('active');
-                });
-            });
-        </script>
+    </div>
+    <footer>
+        <img src="logo.webp" alt="wedding logo" loading="lazy">
+        <p>Christopher & Chanthaphone</p>
+        <p>20 · 03 · 27</p>
+    </footer>
 </body>
 
 </html>
