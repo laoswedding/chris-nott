@@ -200,7 +200,7 @@ section a:hover {
 }
 
 #header-section img {
-  width: 40%;
+  width: 35%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -504,10 +504,6 @@ footer img {
   }
 
   /* Pics Slide Scroll */
-  .pics {
-    padding: 5px 0;
-  }
-
   .pics:hover .pics-slide {
     animation-play-state: running;
   }
