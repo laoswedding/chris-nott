@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Carattere&family=Forum&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+:root {
+  --nav: #222;
+  --gold: rgb(254, 223, 104);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +20,7 @@ body {
   padding: 70px 0 0 0;
   font-family: "Carattere", cursive;
   color: #000;
+  overflow: hidden;
 }
 
 hr {
@@ -37,7 +43,7 @@ a {
 
 .navbar {
   /* color of nav bar */
-  background-color: #f1f1f1;
+  background-color: var(--nav);
   position: fixed;
   top: 0;
   left: 0;
@@ -55,7 +61,7 @@ a {
 }
 
 .navbar h1 {
-  color: #aa901e;
+  color: var(--gold);
 }
 
 .nav-logo {
@@ -77,7 +83,7 @@ a {
 }
 
 .nav-text {
-  color: #aa901e;
+  color: var(--gold);
   margin-right: auto;
   margin-left: 10px;
 }
@@ -86,7 +92,7 @@ a {
   transition: 0.7s ease;
   font-family: "Forum", "Times New Roman", Times, serif;
   text-decoration: none;
-  color: #aa901e;
+  color: var(--gold);
   font-weight: 400;
   font-size: 1.2rem;
 }
@@ -108,7 +114,7 @@ a {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   /* color of bars */
-  background-color: #aa901e;
+  background-color: var(--gold);
   border-radius: 3px;
 }
 
@@ -140,13 +146,22 @@ section p {
 }
 
 section a {
-  color: #fff;
+  /* background-color: rgb(115, 122, 98); */
+  background-color: #fff;
+  color: #000;
+  font-size: 2rem;
+  font-family: "Forum", "Times New Roman", Times, serif;
   transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  border: 2px solid #000;
 }
 
 section a:hover {
   cursor: pointer;
-  filter: brightness(85%);
+  background-color: #000;
+  color: #fff;
 }
 
 .pics {
@@ -154,7 +169,7 @@ section a:hover {
   padding: 0;
   white-space: nowrap;
   position: relative;
-  background-color: rgb(229, 227, 225);
+  background-color: rgb(247, 240, 230);
 }
 
 .pics-track {
@@ -186,11 +201,87 @@ section a:hover {
   }
 }
 
+/* INTRO */
+.intro {
+  width: 100% !important;
+  height: 100vh;
+  background-color: #222222;
+  color: #fff;
+  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.names,
+.intro {
+  width: 65%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  text-align: center;
+}
+
+.intro img {
+  width: 65%;
+}
+
+.intro button,
+#muteBtn {
+  background-color: #fff;
+  color: #000;
+  font-size: 2rem;
+  font-family: "Forum", "Times New Roman", Times, serif;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  border: 2px solid #000;
+}
+
+.intro button:hover,
+#muteBtn:hover {
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+}
+
+.intro.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+  pointer-events: none; /* Prevent interaction after fade-out */
+}
+
+#muteBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  z-index: 10000;
+  display: none;
+}
+
+#muteBtn.active {
+  display: block;
+}
+
 /* HEADER */
 #header-section {
   width: 100%;
   height: calc(100vh - 70px);
-  background-image: url("header-bkgd5.webp");
+  background-image: url("header-bkgd4.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -207,18 +298,43 @@ section a:hover {
   transform: translate(-50%, -50%);
 }
 
-/* LOCATION */
-#location-section {
-  background-image: url("location-bkgd.webp");
+/* KIDS */
+.kid-picture-wrapper {
+  background-image: url("kid-bkgd.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #000;
-  color: #fff;
+  width: 100%;
+  height: 100vh;
+  position: relative;
 }
 
-.location-img {
-  width: 30%;
+.kid-picture-wrapper img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* JOIN US */
+.join-us {
+  background-image: url("pink.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.join-us p {
+  width: 60%;
+}
+
+.caps-join-us {
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 2px;
 }
 
 /* COUNTDOWN */
@@ -226,13 +342,15 @@ section a:hover {
   font-family: "Forum", "Times New Roman", Times, serif;
   text-align: center;
   padding: 40px;
+  background-color: #111;
 }
 
 .countdown-title {
-  font-size: 1.1rem;
+  font-size: 2rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 24px;
+  color: #fff;
 }
 
 .countdown {
@@ -261,7 +379,7 @@ section a:hover {
   font-size: 1rem;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #aa901e;
+  color: #000;
 }
 
 .finished {
@@ -335,6 +453,11 @@ section a:hover {
 
 .accordion-wrapper h2 {
   font-size: 4rem;
+}
+
+.faq-titles {
+  font-size: 2rem;
+  font-family: "Forum", "Times New Roman", Times, serif;
 }
 
 .accordion {
@@ -426,10 +549,11 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: #f1f1f1;
+  background-color: #222;
   gap: 1rem;
   padding: 1rem 0;
   font-size: 1.5rem;
+  color: #fff;
 }
 
 footer img {
@@ -469,7 +593,7 @@ footer img {
     gap: 0;
     flex-direction: column;
     /* color of nav menu links */
-    background-color: #f4f4f4;
+    background-color: #444;
     width: 100%;
     text-align: center;
     transition: 0.3s;
@@ -506,6 +630,14 @@ footer img {
   /* Pics Slide Scroll */
   .pics:hover .pics-slide {
     animation-play-state: running;
+  }
+
+  .kid-picture-wrapper {
+    height: 40vh;
+  }
+
+  .join-us p {
+    width: 90%;
   }
 
   /* SECTION */
@@ -562,12 +694,21 @@ footer img {
     top: 40%;
   }
 
+  /* Join Us */
+  .join-us {
+    background-image: url("pink-mobile.webp");
+  }
+
+  .kid-picture-wrapper img {
+    width: 90%;
+  }
+
   /* MODIFICATION 2 - WIDTH */
   .location-img {
     width: 100%;
   }
 
-    /* MODIFICATION 3 - WIDTH */
+  /* MODIFICATION 3 - WIDTH */
   .agenda-wrapper img {
     width: 100%;
   }

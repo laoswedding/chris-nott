@@ -14,6 +14,45 @@ navLinks.forEach((link) => {
   });
 });
 
+// Force the browser to reset scroll position on reload
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
+// Ensure the page scrolls to the top once the DOM is ready
+window.addEventListener("DOMContentLoaded", () => {
+  window.scrollTo(0, 0);
+});
+
+const intro = document.querySelector(".intro");
+const body = document.querySelector("body");
+const button = document.getElementById("muteBtn");
+const audio = document.getElementById("myAudio");
+
+function playAudio() {
+  intro.classList.add("fade-out");
+  body.style.overflow = "auto";
+  audio.muted = false;
+  audio.currentTime = 0; // Resets audio to start if clicked multiple times
+  audio.play();
+  button.classList.add("active");
+  button.innerHTML = audio.muted
+    ? '<i class="fa-solid fa-volume-xmark"></i>'
+    : '<i class="fa-solid fa-volume-high"></i>';
+}
+
+function toggleMuteAudio() {
+  const audio = document.getElementById("myAudio");
+  audio.muted = !audio.muted;
+  button.innerHTML = audio.muted
+    ? '<i class="fa-solid fa-volume-xmark"></i>'
+    : '<i class="fa-solid fa-volume-high"></i>';
+}
+
+audio.addEventListener("ended", () => {
+  button.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+});
+
 //countdown
 // Set your target date/time here (uses the visitor's local timezone)
 const targetDate = new Date("2027-03-20T17:00:00");

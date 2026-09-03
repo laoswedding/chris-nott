@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="logo.webp" type="image/x-icon">
+    <link rel="shortcut icon" href="logo-new.webp" type="image/x-icon">
     <script src="https://kit.fontawesome.com/8efc22d7af.js" crossorigin="anonymous"></script>
     <script src="app.js" defer></script>
     <script src="accordion.js" defer></script>
@@ -15,7 +15,7 @@
 <body>
     <nav class="navbar">
         <a href="/" class="nav-logo-link">
-            <img src="logo.webp" class="nav-logo" alt="wedding logo">
+            <img src="logo-new.webp" class="nav-logo" alt="wedding logo">
             <h1>Christopher & Chanthaphone</h1>
         </a>
         <ul class="nav-menu">
@@ -41,10 +41,45 @@
             <span class="bar"></span>
         </div>
     </nav>
+    <audio id="myAudio" autoplay src="song.mp3" muted></audio>
+    <button id="muteBtn" onclick="toggleMuteAudio()"><i class="fa-solid fa-volume-xmark"></i></button>
+    <div class="intro">
+        <div class="names">
+            <img src="logo-new.webp" alt="wedding logo" loading="lazy">
+            <h1>Welcome</h1>
+            <button onclick="playAudio()">Enter Site</button>
+        </div>
+    </div>
     <header id="header-section">
         <img src="header-image.webp" alt="Wedding Header Image" loading="lazy">
     </header>
-    <!-- Logo Scroll -->
+    <!-- Countdown -->
+    <div class="countdown-wrap">
+        <div class="countdown-title">Countdown to March 20, 2027, 5:00 PM</div>
+        <div class="countdown" id="countdown">
+            <div class="unit">
+                <div class="value" id="days">00</div>
+                <div class="label">Days</div>
+            </div>
+            <div class="unit">
+                <div class="value" id="hours">00</div>
+                <div class="label">Hours</div>
+            </div>
+            <div class="unit">
+                <div class="value" id="minutes">00</div>
+                <div class="label">Minutes</div>
+            </div>
+            <div class="unit">
+                <div class="value" id="seconds">00</div>
+                <div class="label">Seconds</div>
+            </div>
+        </div>
+    </div>
+    <!-- Kid Picture -->
+    <div class="kid-picture-wrapper">
+        <img src="kids.webp" alt="kids" loading="lazy">
+    </div>
+    <!-- Pics Scroll -->
     <div class="pics">
         <div class="pics-track">
             <div class="pics-slide">
@@ -82,13 +117,24 @@
             </div>
         </div>
     </div>
-    <section id="location-section">
+    <!-- Join Us -->
+    <section class="join-us" id="location-section">
+        <h2>Join Us</h2>
+        <p>Saturday, March 20, 2027</p>
+        <p>We look forward to sharing
+            this special day with you and creating unforgettable memories together.</p>
+        <p class="caps-join-us">LE THATLUANG D'OR BOUTIQUE HOTEL</p>
+        <p class="caps-join-us">VIENTIANE, LAOS</p>
+        <p class="caps-join-us">5:00 PM - 10:00 PM</p>
+        <a href="https://maps.app.goo.gl/36yiVAqR7k178AwV7" target="_blank">View Map</a>
+    </section>
+    <!-- <section id="location-section">
         <h2>Location</h2>
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4259.400707078831!2d102.63443657565523!3d17.982528583009728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x312467c390d43c3d%3A0x375e949108697505!2sLe%20Thatluang%20D'oR%20Boutique%20Hotel!5e1!3m2!1sen!2sla!4v1788052081787!5m2!1sen!2sla"
             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        <img src="le-thatluang-logo.webp" class="location-img" alt="Le Thatluang D'or Boutique Hotel Logo"
+        <img src="le-thatluang-logo-new.webp" class="location-img" alt="Le Thatluang D'or Boutique Hotel Logo"
             loading="lazy">
         <p><b>Location:</b> XJMP+2R6, Vientiane, Laos</p>
         <p><b>Website:</b> <a href="http://www.lethatluangdor.com/" target="blank">lethatluangdor.com</a></p>
@@ -118,7 +164,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <section id="agenda-section">
         <h2>Ceremony <span class="word-space"></span>Agenda</h2>
         <div class="agenda-wrapper">
@@ -139,7 +185,49 @@
         </div>
     </section>
     <div class="accordion-wrapper" id="faq-section">
-        <h2>F A Q</h2>
+        <h2>FAQ</h2>
+        <p class="faq-titles">Wedding FAQ</p>
+        <div class="accordion">
+            <div class="accordion_item">
+                <button type="button" class="accordion_btn">Venue: How do I get there?</button>
+                <div class="accordion_content">
+                    <div class="accordion_inner">
+                        <p>Here is the <a href="https://maps.app.goo.gl/By9MxcNQnzokLqEF7" target="_blank">Google Maps
+                                link</a> that will lead you to Le Thatluang D'or Boutique Hotel.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion_item">
+                <button type="button" class="accordion_btn">Parking: Where can I park?</button>
+                <div class="accordion_content">
+                    <div class="accordion_inner">
+                        <p>There is limited parking at the hotel (~10 spots) and across the street at Green Pepper
+                            Restaurant (~20 spaces). Street parking would be your main option.</p>
+                        <p>It is recommended to arrange
+                            a taxi or rideshare so you don't have to worry about finding a spot. Maxim, Green SM, and
+                            Loca are good options.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion_item">
+                <button type="button" class="accordion_btn">Dress Code: What should I wear?</button>
+                <div class="accordion_content">
+                    <div class="accordion_inner">
+                        <p>It will be hot! Dress accordingly with formal attire while keeping the weather in mind.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion_item">
+                <button type="button" class="accordion_btn">Questions: Can I reach out to you if for more info?</button>
+                <div class="accordion_content">
+                    <div class="accordion_inner">
+                        <p>Of course! Feel free to reach out to Chris or Nott any time and we will respond as quickly as
+                            we can!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="faq-titles">International Guests</p>
         <div class="accordion">
             <div class="accordion_item">
                 <button type="button" class="accordion_btn">Passport: Do I need a passport?</button>
@@ -340,18 +428,6 @@
                 </div>
             </div>
             <div class="accordion_item">
-                <button type="button" class="accordion_btn">Parking: Where can I park when I attend the
-                    wedding?</button>
-                <div class="accordion_content">
-                    <div class="accordion_inner">
-                        <p>With limited parking at the hotel (~10 spots) and across the street at Green Pepper
-                            Restaurant (~20 spaces), there is some street parking.</p>
-                        <p>However, it is recommended to arrange
-                            a taxi or rideshare so you don't have to worry about finding a spot.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion_item">
                 <button type="button" class="accordion_btn">Weather: What will the weather be like?</button>
                 <div class="accordion_content">
                     <div class="accordion_inner">
@@ -393,7 +469,7 @@
         </div>
     </div>
     <footer>
-        <img src="logo.webp" alt="wedding logo" loading="lazy">
+        <img src="logo-new.webp" alt="wedding logo" loading="lazy">
         <p>Christopher & Chanthaphone</p>
         <p>20 · 03 · 27</p>
     </footer>
