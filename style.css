@@ -468,6 +468,75 @@ section a:hover {
   width: 100%;
 }
 
+.agenda-date {
+  font-weight: bold;
+}
+
+/* FIVE PIC LAYOUT */
+.five-wrapper {
+  width: 100%;
+  display: flex;
+}
+
+.five-left, .five-right {
+  width: 50%;
+}
+
+.five-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.five-top, .five-bottom {
+  width: 100%;
+  display: flex;
+}
+
+.five-top-left,
+.five-top-right,
+.five-bottom-left,
+.five-bottom-right {
+  width: 50%;
+}
+
+.five-top-left img,
+.five-top-right img,
+.five-bottom-left img,
+.five-bottom-right img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.five-left img {
+  width: 100%;
+    display: block;
+  object-fit: cover;
+}
+
+/* GALLERY */
+.gallery-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.gallery-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.gallery-container img {
+  width: 23.2%;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+}
+
 /* ACCORDION */
 #faq-section h2 {
   letter-spacing: 0.5rem;
@@ -486,7 +555,8 @@ section a:hover {
 }
 
 .faq-titles {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
+  font-weight: bold;
   font-family: "Forum", "Times New Roman", Times, serif;
 }
 
@@ -650,7 +720,7 @@ footer img {
   .nav-menu.active {
     left: 0;
   }
-  
+
   /* Pics Slide Scroll */
   .pics:hover .pics-slide {
     animation-play-state: running;
@@ -734,6 +804,12 @@ footer img {
   /* Join Us */
   .join-us {
     background-image: url("pink-mobile.webp");
+    background-attachment: scroll;
+  }
+
+  .agenda-date {
+    font-size: 1.6rem !important;
+    text-align: center !important;
   }
 
   .kid-picture-wrapper img {
@@ -767,5 +843,27 @@ footer img {
 
   .accordion_inner {
     font-size: 1.2rem;
+  }
+
+  .five-wrapper {
+    flex-direction: column;
+  }
+
+  .five-left, .five-right {
+    width: 100%;
+  }
+
+  .gallery-wrapper {
+    padding: 1rem 0;
+  }
+
+  .gallery-container {
+    width: 100%;
+    gap: .5rem;
+    justify-content: center;
+  }
+
+  .gallery-container img {
+    width: 30%;
   }
 }
