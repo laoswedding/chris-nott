@@ -32,13 +32,13 @@ const audio = document.getElementById("myAudio");
 function playAudio() {
   intro.classList.add("fade-out");
   body.style.overflow = "auto";
-  audio.muted = false;
-  audio.currentTime = 0; // Resets audio to start if clicked multiple times
-  audio.play();
-  button.classList.add("active");
-  button.innerHTML = audio.muted
-    ? '<i class="fa-solid fa-volume-xmark"></i>'
-    : '<i class="fa-solid fa-volume-high"></i>';
+  // audio.muted = false;
+  // audio.currentTime = 0; // Resets audio to start if clicked multiple times
+  // audio.play();
+  // button.classList.add("active");
+  // button.innerHTML = audio.muted
+  //   ? '<i class="fa-solid fa-volume-xmark"></i>'
+  //   : '<i class="fa-solid fa-volume-high"></i>';
 }
 
 function toggleMuteAudio() {
