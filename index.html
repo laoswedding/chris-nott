@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="logo-new.webp" type="image/x-icon">
+    <link rel="shortcut icon" href="white-logo.webp" type="image/x-icon">
     <script src="https://kit.fontawesome.com/8efc22d7af.js" crossorigin="anonymous"></script>
     <script src="app.js" defer></script>
     <script src="accordion.js" defer></script>
@@ -15,7 +15,7 @@
 <body>
     <nav class="navbar">
         <a href="/" class="nav-logo-link">
-            <img src="logo-new.webp" class="nav-logo" alt="wedding logo">
+            <img src="white-logo.webp" class="nav-logo" alt="wedding logo">
             <h1>Christopher & Chanthaphone</h1>
         </a>
         <ul class="nav-menu">
@@ -28,9 +28,9 @@
             <li class="nav-item">
                 <a href="#agenda-section" class="nav-link">Agenda</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a href="#bios-section" class="nav-link">Bios</a>
-            </li>
+            </li> -->
             <li class="nav-item">
                 <a href="#faq-section" class="nav-link">FAQ</a>
             </li>
@@ -45,14 +45,16 @@
     <button id="muteBtn" onclick="toggleMuteAudio()"><i class="fa-solid fa-volume-xmark"></i></button>
     <div class="intro">
         <div class="names">
-            <img src="logo-new.webp" alt="wedding logo" loading="lazy">
+            <img src="white-logo.webp" alt="wedding logo" loading="lazy">
             <h1>Welcome</h1>
             <button onclick="playAudio()">Enter Site</button>
         </div>
     </div>
-    <header id="header-section">
-        <img src="header-image.webp" alt="Wedding Header Image" loading="lazy">
-    </header>
+    <video src="wedding-vid.mp4" autoplay muted loop playsinline class="header-video"></video>
+    <!-- <header id="header-section">
+        
+      <img src="env.webp" alt="Wedding Header Image" loading="lazy"> 
+    </header> -->
     <!-- Countdown -->
     <div class="countdown-wrap">
         <div class="countdown-title">Countdown to March 20, 2027, 5:00 PM</div>
@@ -75,6 +77,15 @@
             </div>
         </div>
     </div>
+    <!-- Half -->
+    <div class="half-wrapper">
+        <div class="half">
+            <img src="half-1.webp" alt="Nott" class="half-img">
+        </div>
+        <div class="half">
+            <img src="half-2.webp" alt="Nott" class="half-img">
+        </div>
+    </div>
     <!-- Kid Picture -->
     <div class="kid-picture-wrapper">
         <img src="kids.webp" alt="kids" loading="lazy">
@@ -91,7 +102,7 @@
                 <img src="images/scroll-9.webp" alt="Chris and Nott">
                 <img src="images/scroll-8.webp" alt="Chris and Nott">
                 <img src="images/scroll-7.webp" alt="Chris and Nott">
-                <img src="images/scroll-6.webp" alt="Chris and Nott">
+                <img src="images/scroll-15.webp" alt="Chris and Nott">
                 <img src="images/scroll-5.webp" alt="Chris and Nott">
                 <img src="images/scroll-4.webp" alt="Chris and Nott">
                 <img src="images/scroll-3.webp" alt="Chris and Nott">
@@ -108,7 +119,7 @@
                 <img src="images/scroll-9.webp" alt="Chris and Nott">
                 <img src="images/scroll-8.webp" alt="Chris and Nott">
                 <img src="images/scroll-7.webp" alt="Chris and Nott">
-                <img src="images/scroll-6.webp" alt="Chris and Nott">
+                <img src="images/scroll-15.webp" alt="Chris and Nott">
                 <img src="images/scroll-5.webp" alt="Chris and Nott">
                 <img src="images/scroll-4.webp" alt="Chris and Nott">
                 <img src="images/scroll-3.webp" alt="Chris and Nott">
@@ -120,7 +131,7 @@
     <!-- Join Us -->
     <section class="join-us" id="location-section">
         <h2>Join Us</h2>
-        <p>Saturday, March 20, 2027</p>
+        <p class="spaced-out">Saturday, March 20, 2027</p>
         <p>We look forward to sharing
             this special day with you and creating unforgettable memories together.</p>
         <p class="caps-join-us">LE THATLUANG D'OR BOUTIQUE HOTEL</p>
@@ -128,49 +139,13 @@
         <p class="caps-join-us">5:00 PM - 10:00 PM</p>
         <a href="https://maps.app.goo.gl/36yiVAqR7k178AwV7" target="_blank">View Map</a>
     </section>
-    <!-- <section id="location-section">
-        <h2>Location</h2>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4259.400707078831!2d102.63443657565523!3d17.982528583009728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x312467c390d43c3d%3A0x375e949108697505!2sLe%20Thatluang%20D'oR%20Boutique%20Hotel!5e1!3m2!1sen!2sla!4v1788052081787!5m2!1sen!2sla"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        <img src="le-thatluang-logo-new.webp" class="location-img" alt="Le Thatluang D'or Boutique Hotel Logo"
-            loading="lazy">
-        <p><b>Location:</b> XJMP+2R6, Vientiane, Laos</p>
-        <p><b>Website:</b> <a href="http://www.lethatluangdor.com/" target="blank">lethatluangdor.com</a></p>
-        <p><b>Date:</b> Saturday, March 20, 2027</p>
-        <p><b>Time:</b> 5:00 PM - 10:00 PM</p>
-        <p>Come take pictures with friends and family in our photobooth from AD Studio!</p>
-        <a href="https://www.facebook.com/ADStudio.AddieChounlamonty" target="_blank"> <img src="ad-studio.webp"
-                alt="ad studio logo" loading="lazy"></a>
-        <div class="countdown-wrap">
-            <div class="countdown-title">Countdown to March 20, 2027, 5:00 PM</div>
-            <div class="countdown" id="countdown">
-                <div class="unit">
-                    <div class="value" id="days">00</div>
-                    <div class="label">Days</div>
-                </div>
-                <div class="unit">
-                    <div class="value" id="hours">00</div>
-                    <div class="label">Hours</div>
-                </div>
-                <div class="unit">
-                    <div class="value" id="minutes">00</div>
-                    <div class="label">Minutes</div>
-                </div>
-                <div class="unit">
-                    <div class="value" id="seconds">00</div>
-                    <div class="label">Seconds</div>
-                </div>
-            </div>
-        </div>
-    </section> -->
+
     <section id="agenda-section">
         <h2>Ceremony <span class="word-space"></span>Agenda</h2>
         <div class="agenda-wrapper">
             <img src="placeholder-1.jpeg" alt="dining room" loading="lazy">
             <div class="agenda-container">
-                <p>Saturday, March 20, 2027</p>
+                <p>Saturday, March 20, 2027 (Tentative Event Schedule)</p>
                 <hr>
                 <p><b>17:00</b>: Baci Ceremony</p>
                 <p><b>18:00</b>: Group Photo</p>
@@ -271,6 +246,8 @@
                             off for immigration officers to scan and keep your boarding passes throughout the journey.
                             Provide proof
                             of onward travel too, such as a flight itinerary.</p>
+                        <p>For other routes and transits, please do your research before planning and booking your
+                            tickets.</p>
                     </div>
                 </div>
             </div>
@@ -278,7 +255,7 @@
                 <button type="button" class="accordion_btn">Phone: Can I use my phone there?</button>
                 <div class="accordion_content">
                     <div class="accordion_inner">
-                        <p>If your phone is unlocked, you can get an e-sim at Wattay Airport. My service
+                        <p>If your phone is unlocked, you can get an e-sim at Wattay Airport. Our service
                             provider is Lao Telecom and it works well. After you
                             get an e-sim
                             with a Lao number, you can get a phone plan for 25GB that lasts 1 month, costing just under
@@ -392,7 +369,7 @@
                             worried about
                             stomach problems, pack
                             some
-                            immodium tablets with you. We appreciate you being adventurous and trying new things but if
+                            Imodium tablets with you. We appreciate you being adventurous and trying new things but if
                             something seems questionable, just avoid it. For more specific
                             requests, feel free to contact Chris or Nott.</p>
                     </div>
@@ -445,8 +422,9 @@
                             Textile Museum, Lao Art Museum, Hor Phra Keo Museum, That Dam Stupa, Chao Anouvong Park,
                             Mekong River Night Market</p>
                         <p><b>Temples:</b> Wat Simeuang, Wat Sisaket, Wat That Khao, Wat Mixai, Wat Ong Teu Temple</p>
-                        <p><b>Malls:</b> Vientiane Center (has bowling alley and movie theater), Parkson, Itecc (has
-                            movie theater), Kokkok Mega Mall, Talat Sao (Morning Market)</p>
+                        <p><b>Malls:</b> Kokkok Mega Mall <i>(five-stories and opened August 2026)</i>, Vientiane Center
+                            <i>(has a bowling alley and movie theater)</i>, Parkson, Itecc <i>(has
+                                movie theater)</i>, Talat Sao (Morning Market)</p>
                         <p><b>Food/Drink:</b> Try a restaurant or café. For specific requests, contact Chris or Nott.
                         </p>
                         <p><b>Other:</b> If none of the above interests you and you have time, you can ride the
@@ -469,7 +447,7 @@
         </div>
     </div>
     <footer>
-        <img src="logo-new.webp" alt="wedding logo" loading="lazy">
+        <img src="white-logo.webp" alt="wedding logo" loading="lazy">
         <p>Christopher & Chanthaphone</p>
         <p>20 · 03 · 27</p>
     </footer>
