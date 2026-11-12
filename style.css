@@ -309,11 +309,9 @@ section a:hover {
 
 .half-img {
   width: 100%;
-    display: block;
-    object-fit: cover;
+  display: block;
+  object-fit: cover;
 }
-
-
 
 /* KIDS */
 .kid-picture-wrapper {
@@ -482,7 +480,8 @@ section a:hover {
   display: flex;
 }
 
-.five-left, .five-right {
+.five-left,
+.five-right {
   width: 50%;
 }
 
@@ -491,7 +490,8 @@ section a:hover {
   flex-direction: column;
 }
 
-.five-top, .five-bottom {
+.five-top,
+.five-bottom {
   width: 100%;
   display: flex;
 }
@@ -514,7 +514,7 @@ section a:hover {
 
 .five-left img {
   width: 100%;
-    display: block;
+  display: block;
   object-fit: cover;
 }
 
@@ -539,6 +539,72 @@ section a:hover {
 .gallery-container img {
   width: 20%;
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.03);
+    opacity: 0.9;
+}
+
+/* Lightbox Overlay Styling */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* Prevents blocking the page when closed */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.lightbox-overlay img {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.lightbox-overlay.active img {
+    transform: scale(1);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 300;
+    cursor: pointer;
+    background: none;
+    border: none;
+    line-height: 1;
+    padding: 5px;
+    z-index: 10000;
+}
+
+.lightbox-close:hover {
+    color: #ff5c5c;
 }
 
 /* ACCORDION */
@@ -702,11 +768,11 @@ footer img {
     width: 100%;
     text-align: center;
     transition: 0.3s;
-    opacity: 0.95;
+    opacity: 0.98;
   }
 
   .navbar {
-     padding: 0 12px;
+    padding: 0 12px;
   }
 
   .navbar h1 {
@@ -857,7 +923,8 @@ footer img {
     flex-direction: column;
   }
 
-  .five-left, .five-right {
+  .five-left,
+  .five-right {
     width: 100%;
   }
 
@@ -867,7 +934,7 @@ footer img {
 
   .gallery-container {
     width: 100%;
-    gap: .5rem;
+    gap: 0.5rem;
     justify-content: center;
   }
 

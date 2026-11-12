@@ -90,3 +90,55 @@ function updateCountdown() {
 
 updateCountdown();
 const timer = setInterval(updateCountdown, 1000);
+
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Create the lightbox elements dynamically
+    const overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+
+    const lightboxImg = document.createElement('img');
+    overlay.appendChild(lightboxImg);
+
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'lightbox-close';
+    closeBtn.innerHTML = '&times;';
+    overlay.appendChild(closeBtn);
+
+    document.body.appendChild(overlay);
+
+    // 2. Select all images inside the gallery container
+    const galleryImages = document.querySelectorAll('.gallery-container img');
+
+    // 3. Attach click event listener to open lightbox
+    galleryImages.forEach(img => {
+        img.addEventListener('click', () => {
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+    });
+
+    // 4. Close functions
+    const closeLightbox = () => {
+        overlay.classList.remove('active');
+        document.body.style.overflow = 'auto'; // Explicitly restore scrolling
+    };
+
+    // Close when clicking the close button
+    closeBtn.addEventListener('click', closeLightbox);
+
+    // Close when clicking outside the image (on the dark background)
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            closeLightbox();
+        }
+    });
+
+    // Close when pressing the 'Escape' key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && overlay.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
+});
