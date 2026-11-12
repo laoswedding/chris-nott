@@ -362,6 +362,10 @@ section a:hover {
   letter-spacing: 2px;
 }
 
+.hotel {
+  width: 50%;
+}
+
 /* COUNTDOWN */
 .countdown-wrap {
   font-family: "Forum", "Times New Roman", Times, serif;
@@ -805,6 +809,10 @@ footer img {
   .join-us {
     background-image: url("pink-mobile.webp");
     background-attachment: scroll;
+  }
+
+  .hotel {
+    width: 100%;
   }
 
   .agenda-date {
