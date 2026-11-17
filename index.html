@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/8efc22d7af.js" crossorigin="anonymous"></script>
     <script src="app.js" defer></script>
     <script src="accordion.js" defer></script>
+    <script src="slideshow.js" defer></script>
     <title>Christopher & Chanthaphone Wedding | March 20, 2027</title>
 </head>
 
@@ -27,6 +28,9 @@
             </li>
             <li class="nav-item">
                 <a href="#agenda-section" class="nav-link">Agenda</a>
+            </li>
+            <li class="nav-item">
+                <a href="#gallery-section" class="nav-link">Gallery</a>
             </li>
             <!-- <li class="nav-item">
                 <a href="#bios-section" class="nav-link">Bios</a>
@@ -51,7 +55,7 @@
         </div>
     </div>
     <!-- Video -->
-    <video src="wedding-vid.mp4" autoplay muted loop playsinline class="header-video"></video>
+    <video src="wedding-vid.mp4" autoplay muted loop playsinline class="header-video" id="header-section"></video>
     <!-- Countdown -->
     <div class="countdown-wrap">
         <div class="countdown-title">Countdown to March 20, 2027, 5:00 PM</div>
@@ -76,12 +80,23 @@
     </div>
     <!-- Half -->
     <div class="half-wrapper">
-        <div class="half">
-            <img src="half-1-2.webp" alt="Nott" class="half-img" loading="lazy">
+        <div class="slideshow">
+            <div class="slide active">
+                <img src="half-1.webp" alt="">
+            </div>
+            <div class="slide">
+                <img src="half-11.webp" alt="">
+            </div>
         </div>
-        <div class="half">
-            <img src="half-2.webp" alt="Nott" class="half-img" loading="lazy">
+        <div class="slideshow2">
+            <div class="slide2 active">
+                <img src="half-2.webp" alt="">
+            </div>
+            <div class="slide2">
+                <img src="half-22.webp" alt="">
+            </div>
         </div>
+
     </div>
     <!-- Kid Picture -->
     <div class="kid-picture-wrapper">
@@ -181,7 +196,8 @@
         </div>
     </section>
     <!-- Gallery -->
-     <div class="gallery-wrapper">
+    <div class="gallery-wrapper" id="gallery-section">
+        <h2>Gallery</h2>
         <div class="gallery-container">
             <img src="images/scroll-1.webp" alt="" loading="lazy">
             <img src="images/scroll-2.webp" alt="" loading="lazy">
@@ -196,7 +212,7 @@
             <img src="images/scroll-11.webp" alt="" loading="lazy">
             <img src="images/scroll-12.webp" alt="" loading="lazy">
         </div>
-     </div>
+    </div>
     <div class="accordion-wrapper" id="faq-section">
         <h2>FAQ</h2>
         <p class="faq-titles">Wedding FAQ</p>
