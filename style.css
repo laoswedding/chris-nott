@@ -54,7 +54,7 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 0 24px;
-  z-index: 10;
+  z-index: 9999;
   box-shadow:
     0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -205,7 +205,7 @@ section a:hover {
 .intro {
   width: 100% !important;
   height: 100vh;
-  background-color: #222222;
+  background-color: rgb(34, 34, 34);
   color: #fff;
   position: relative;
   position: absolute;
@@ -226,10 +226,17 @@ section a:hover {
   transform: translate(-50%, -50%);
   font-size: 3rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .intro img {
   width: 65%;
+}
+
+.env-new {
+  width: 100%;
 }
 
 .intro button,
@@ -279,6 +286,14 @@ section a:hover {
   display: block;
 }
 
+/* .invite-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
 /* HEADER */
 #header-section {
   width: 100%;
@@ -293,6 +308,26 @@ section a:hover {
   height: 100vh;
   object-fit: cover;
   display: block;
+}
+
+.new-video-wrapper {
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  position: relative;
+}
+
+.new-video {
+  width: 100%;
+}
+
+.new-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  width: 50%;
 }
 
 /* HALF */
@@ -553,65 +588,67 @@ section a:hover {
 }
 
 .gallery-container img:hover {
-    transform: scale(1.03);
-    opacity: 0.9;
+  transform: scale(1.03);
+  opacity: 0.9;
 }
 
 /* Lightbox Overlay Styling */
 .lightbox-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none; /* Prevents blocking the page when closed */
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none; /* Prevents blocking the page when closed */
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 
 .lightbox-overlay.active {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .lightbox-overlay img {
-    max-width: 90%;
-    max-height: 90vh;
-    object-fit: contain;
-    border-radius: 4px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    transform: scale(0.95);
-    transition: transform 0.3s ease;
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
 }
 
 .lightbox-overlay.active img {
-    transform: scale(1);
+  transform: scale(1);
 }
 
 .lightbox-close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    color: #ffffff;
-    font-size: 40px;
-    font-weight: 300;
-    cursor: pointer;
-    background: none;
-    border: none;
-    line-height: 1;
-    padding: 5px;
-    z-index: 10000;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 300;
+  cursor: pointer;
+  background: none;
+  border: none;
+  line-height: 1;
+  padding: 5px;
+  z-index: 10000;
 }
 
 .lightbox-close:hover {
-    color: #ff5c5c;
+  color: #ff5c5c;
 }
 
 /* ACCORDION */
@@ -813,9 +850,8 @@ footer img {
   object-fit: cover;
 }
 
-
 /* TABLET BREAKPOINTS */
-@media (max-width: 1024px) {
+@media (max-width: 1033px) {
   section {
     padding: 2rem 1rem;
     height: 100%;
@@ -874,9 +910,21 @@ footer img {
     left: 0;
   }
 
+  .new-video-wrapper {
+    height: 100%;
+  }
+
   /* Pics Slide Scroll */
   .pics:hover .pics-slide {
     animation-play-state: running;
+  }
+
+  .intro {
+    background-position: center;
+  }
+
+  .names {
+    width: 100%;
   }
 
   .kid-picture-wrapper {
@@ -895,12 +943,6 @@ footer img {
   /* MODIFICATION 2 - WIDTH */
   .location-img {
     width: 50%;
-  }
-
-  .agenda-wrapper {
-    flex-direction: column;
-    align-items: center;
-    width: 95%;
   }
 
   /* MODIFICATION 3 - WIDTH */
@@ -932,6 +974,10 @@ footer img {
   .accordion_btn {
     font-size: 1.2rem;
   }
+
+  .half-wrapper {
+    height: 50vh;
+  }
 }
 
 /* MOBILE BREAKPOINTS */
@@ -940,6 +986,14 @@ footer img {
     background-image: url("intro-bkgd-mb2.webp");
     background-position: center;
   }
+
+  .names {
+    width: 100%;
+  }
+
+  .env-new {
+    margin-bottom: 1rem;
+  }
   /* MODIFICATION 1 - TOP */
 
   .header-video {
@@ -947,6 +1001,7 @@ footer img {
   }
 
   .half-wrapper {
+    height: 100vh;
     flex-direction: column;
   }
 
@@ -989,6 +1044,12 @@ footer img {
     flex-direction: column;
     gap: 1rem;
     width: 100%;
+  }
+
+  .agenda-wrapper {
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
   }
 
   .spaced-out {
@@ -1045,5 +1106,33 @@ footer img {
     width: 100%;
   }
 
+  .env-new {
+    width: 95% !important;
+  }
 
+  .new-video-wrapper {
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    position: relative;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .new-video {
+    height: 100%;
+    width: 400%;
+  }
+
+
+  .new-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 80%;
+  }
 }

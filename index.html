@@ -49,13 +49,15 @@
     <button id="muteBtn" onclick="toggleMuteAudio()"><i class="fa-solid fa-volume-xmark"></i></button>
     <div class="intro">
         <div class="names">
-            <img src="white-logo.webp" alt="wedding logo" loading="lazy">
-            <h1>Welcome</h1>
+            <img src="env-new.webp" class="env-new">
             <button onclick="playAudio()">Enter Site</button>
         </div>
     </div>
     <!-- Video -->
-    <video src="wedding-vid.mp4" autoplay muted loop playsinline class="header-video" id="header-section"></video>
+    <div class="new-video-wrapper">
+        <img src="white-logo.webp" alt="" class="new-logo">
+        <video src="wedding-vid2.mp4" autoplay muted loop playsinline class="new-video"></video>
+    </div>
     <!-- Countdown -->
     <div class="countdown-wrap">
         <div class="countdown-title">Countdown to March 20, 2027, 5:00 PM</div>
