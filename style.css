@@ -232,7 +232,7 @@ section a:hover {
 }
 
 .intro img {
-  width: 65%;
+  width: 60%;
 }
 
 .env-new {
@@ -319,6 +319,7 @@ section a:hover {
 
 .new-video {
   width: 100%;
+  display: block;
 }
 
 .new-logo {
@@ -845,7 +846,8 @@ footer img {
 }
 
 .third {
-  width: 33.33%;
+  flex: 1 1 0;
+  min-width: 0;
   display: block;
   object-fit: cover;
 }
