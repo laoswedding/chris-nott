@@ -295,21 +295,6 @@ section a:hover {
 } */
 
 /* HEADER */
-#header-section {
-  width: 100%;
-  height: 100vh;
-  background-color: #111;
-  color: #fff;
-  /* position: relative; */
-}
-
-.header-video {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  display: block;
-}
-
 .new-video-wrapper {
   height: 100%;
   width: 100%;
@@ -1020,11 +1005,6 @@ footer img {
     margin-bottom: 1rem;
   }
   /* MODIFICATION 1 - TOP */
-
-  .header-video {
-    height: 90vh !important;
-  }
-
   .half-wrapper {
     height: 100vh;
     flex-direction: column;
